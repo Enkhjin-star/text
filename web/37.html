@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web</title>
+    <style>
+        /* Common styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .div1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 75px;
+            background-color: red;
+        }
+        .button {
+            height: 30px;
+            width: 250px;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: lightgrey;
+        }
+        .div2 {
+            margin-top: 10px;
+            text-align: center;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .divjij {
+            width: 80%;
+            max-width: 200px;
+            height: auto;
+        }
+        .div3 {
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .div4 {
+            float: right;  
+            display: flex;
+            align-items: center;  
+            height: 100px;
+            background-color: lightpink;  
+            justify-content: center;  
+            font: 25px arial;  
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+ 
+/* Tablet view */
+@media (max-width: 1023px) and (min-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column; /* Босоо байрлалтай */
+    }
+    .div1,.div4 {
+        width: 100%;
+    }
+    .content {
+        display: flex;
+        flex-direction: row; /* Зэрэгцээ байрлалтай */
+    }
+    .div2 {
+        width: 50%; /* Профайл хэсгийг бага зэрэг багасгах */
+    }
+    .div3 {
+        width: 50%; /* Үлдсэн хэсгийг агуулгад өгнө */
+    }
+}
+
+/* Mobile view */
+@media (max-width: 599px) {
+    .container {
+        display: flex;
+        flex-direction: column; /* Элементийг багана байдлаар байрлуулах */
+    }
+    .div2, .div3, .div4 {
+        width: 100%; /* Бүх div-үүд дэлгэцийн өргөнтэй тэнцүү байна */
+        padding: 10px; /* Ирмэгээс зай авч өгнө */
+    }
+    .div2 {
+        height: auto; /* Өндөр нь агуулгад таарна */
+    }
+    .div3 {
+        height: 400px; /* div3-ийн өндөр 400px байна */
+    }
+    .button {
+        width: 100px; /* Товчлуурын өргөн 100px байна */
+        font-size: 14px; /* Фонтын хэмжээ 14px байна */
+    }
+}
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <a href="my web.html" target="АГУУЛГА"><button class="button">Нүүр хуудас</button></a>
+        <a href="5.html" target="АГУУЛГА"><button class="button">Зурагнууд</button></a>
+        <a href="11.html" target="АГУУЛГА"><button class="button">Бичлэгнүүд</button></a>
+        <a href="6.html" target="АГУУЛГА"><button class="button">Газрын зураг</button></a>
+    </div>
+    <div class="container">
+        <div class="div2">
+            <div class="divjij">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlrZqTCInyg6RfYC7Ape20o-EWP1EN_A8fOA&s.jpg" width="100%">
+            </div>
+            <p> Хувийн мэдээлэл </p>
+            <a>Name : Enkhjin </a><br>
+            <a>Gender : female </a><br>
+            <a>Height : 168</a><br>
+            <a>School : UFE </a><br>
+            <a>Home address : </a>
+        </div>
+        <div class="div3">
+            <iframe name="АГУУЛГА"></iframe>
+        </div>
+        <div class="div4">Гэрийн хаяг</div>
+    </div>
+</body>
+</html>

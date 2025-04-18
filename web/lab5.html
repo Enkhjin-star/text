@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8"> <!-- Монгол болон бусад тэмдэгтийг зөв харуулах кодчилол -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Гар утас, таблетад тохируулах -->
+    <title>Веб сайт</title>
+ 
+    <style>
+        /* ---------- Бүхэл вэб хуудсын үндсэн загвар ---------- */
+        body {
+            font-family: Arial, sans-serif; /* Үсгийн фонт */
+            margin: 0; /* Гадна захын зай арилгана */
+            padding: 0; /* Дотор зай арилгана */
+            background-color: #f8f9fa; /* Цайвар саарал дэвсгэр */
+        }
+
+        /* ---------- Navigation bar буюу цэсний хэсэг ---------- */
+        .navbar {
+            background-color: #57bce8;  
+            padding: 15px; /* Дотор талын хоосон зай */
+            text-align: center; /* Товчлууруудыг голлуулна */
+        }
+
+        .navbar button {
+            margin: 30px; /* Товчнуудын хооронд зай үүсгэнэ */
+            padding: 10px 20px; /* Товчны дотор талын зай */
+            border: none; /* Хүрээ байхгүй */
+            background-color: white; /* Цагаан өнгөтэй товч */
+            cursor: pointer; /* Хулганы заагч товчин дээр очиход pointer болно */
+            border-radius: 5px; /* Товчлуурын буланг дугуйруулна */
+        }
+
+        .navbar button:hover {
+            background-color: #ddd; /* Хулгана очих үед товчны өнгө өөрчлөгдөнө */
+        }
+
+        /* ---------- Гол бүтэц: 2 хуваалт (Flex) ---------- */
+        .main-container {
+            display: flex; /* Flexbox ашиглан зүүн баруун хэсгийг зэрэгцүүлж байрлуулна */
+            justify-content: space-between; /* Зайг жигд хуваарилна */
+            padding: 20px;
+            gap: 20px; /* Хэсгүүдийн хоорондох зай */
+        }
+
+        .profile-section, .content-section {
+            width: 50%; /* Хоёр хэсэгт 50% зай өгнө */
+            padding: 20px;
+        }
+
+        /* ---------- Зүүн талын "Хувийн мэдээлэл" хэсэг ---------- */
+        .profile-section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Сүүдэртэй хайрцаг */
+            text-align: center; /* Доторх текстүүдийг голлуулна */
+        }
+
+        .profile-section img {
+            width: 150px; /* Зургийн өргөн */
+            height: 150px; /* Зургийн өндөр */
+            background: gray; /* Зураг ачаалагдаагүй тохиолдолд харагдах өнгө */
+            border-radius: 10px;
+            display: block; /* Блок хэлбэртэй */
+            margin: 0 auto 15px auto; /* Голлуулж доош нь зай авна */
+        }
+
+        /* ---------- Баруун талын iframe буюу контент хэсэг ---------- */
+        .content-section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Сүүдэртэй хайрцаг */
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%; /* Хайрцаг дүүрэн өргөнтэй */
+            height: 500px; /* Өндөр */
+            border: none; /* Хүрээ байхгүй */
+        }
+
+        /* ---------- Доод хэсэг: Footer ---------- */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: lightpink;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* ---------- Гар утас зэрэг жижиг дэлгэцэд зориулсан Responsive загвар ---------- */
+        @media screen and (max-width: 768px) {
+            .main-container {
+                flex-direction: column; /* Хэсгүүд доош дарааллан гарна */
+            }
+
+            .profile-section, .content-section {
+                width: 100%; /* 100% өргөнтэй болгоно */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="my web.html" target="АГУУЛГА"><button>Нүүр хуудас</button></a>
+        <a href="5.html" target="АГУУЛГА"><button>Зурагнууд</button></a>
+        <a href="11.html" target="АГУУЛГА"><button>Бичлэгнүүд</button></a>
+        <a href="6.html" target="АГУУЛГА"><button>Газрын зураг</button></a>
+    </div>
+
+    <!-- Гол контентын хэсэг -->
+    <div class="main-container">
+        <!-- Зүүн талын профайл хэсэг -->
+        <div class="profile-section">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlrZqTCInyg6RfYC7Ape20o-EWP1EN_A8fOA&s.jpg" alt="Профайл">
+            <p>Хувийн мэдээлэл</p>
+            <br/><a>Name : Enkhjin </a>
+            <br/><a>Gender : Female </a>
+            <br/><a>Height : 168 cm</a>
+            <br/><a>School : UFE</a>
+            <br/><a>Home address : </a>
+        </div>
+
+        <!-- Баруун талын iframe буюу контент хэсэг -->
+        <div class="content-section">
+            <iframe name="АГУУЛГА"></iframe>
+        </div>
+    </div>
+
+    <!-- Хуудасны доод хэсэг -->
+    <div class="footer">
+        Гэрийн хаяг
+    </div>
+</body>
+</html>

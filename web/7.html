@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web site</title>
+    <style>
+        /* Улаан өнгийн толгойн хэсэг (Navigation bar) */
+        .div1 {
+            display: flex; /* Флексбокс ашиглаж доторх элементүүдийг нэг шугамд байрлуулна */
+            justify-content: center; /* Товчнуудыг төвд байрлуулна */
+            align-items: center; /* Босоогоор төвд байрлуулна */
+            width: 100%; /* Бүрэн өргөнтэй */
+            height: 75px; /* Өндөр */
+            background-color: red; /* Улаан өнгийн дэвсгэр */
+        }
+
+        /* Зүүн багана (Хувийн мэдээлэл хэсэг) */
+        .div2 {
+            margin-top: 10px; /* Дээрээс 10px зай авна */
+            float: left; /* Зүүн талд байрлана */
+            text-align: center; /* Текстийг төвд байрлуулна */
+            width: 35%; /* Өргөн */
+            flex: 1; /* Уян хатан өргөнтэй */
+            height: 790px; /* Өндөр */
+            background-color: whitesmoke; /* Цагаан өнгийн дэвсгэр */
+            display: flex;
+            flex-direction: column; /* Доторх элементүүдийг багана байдлаар байрлуулна */
+        }
+
+        /* Зүүн баганад байрлах жижиг хайрцаг (зураг) */
+        .divjij {
+            margin-top: 10px; /* Дээрээс 10px зай авна */
+            margin-left: 30%; /* Зүүнээс 30% зай авна */
+            width: 45%; /* Өргөн */
+            height: 45%; /* Өндөр */
+            background-color: darkgray; /* Хар саарал дэвсгэр */
+            justify-content: center; /* Төвд байрлуулна */
+            font: 25px arial; /* Фонтын хэмжээ, төрлийг тохируулна */
+        }
+
+        /* Баруун талын гол контент хэсэг */
+        .div3 {
+            float: right; /* Баруун талд байрлана */
+            display: flex;
+            width: 64.5%; /* Баруун талын өргөн */
+            height: 680px; /* Өндөр */
+            background-color: whitesmoke; /* Цагаан дэвсгэр */
+        }
+
+        /* Баруун доод хэсэг (Гэрийн хаяг) */
+        .div4 {
+            float: right; /* Баруун талд байрлана */
+            display: flex;
+            align-items: center; /* Босоогоор төвд байрлуулна */
+            width: 64.5%;
+            height: 100px;
+            background-color: lightpink; /* Ягаан өнгийн дэвсгэр */
+            justify-content: center; /* Төвд байрлуулна */
+            font: 25px arial; /* Фонтын хэмжээ, төрлийг тохируулна */
+        }
+
+        /* Товчлуурын стиль */
+        .button {
+            height: 30px;
+            width: 250px;
+            margin-left: 30px;
+        }
+
+        /* Товчлуур дээр хулганаа аваачихад өнгө өөрчлөгдөх */
+        button:hover {
+            background-color: lightgrey; /* Саарал өнгө болно */
+        }
+    </style>
+</head>
+<body>
+    <!-- Улаан толгойн хэсэг (Navigation bar) -->
+    <div class="div1">
+        <!-- Товчлуурууд: Нүүр хуудас, Зурагнууд, Бичлэгнүүд, Газрын зураг -->
+        <a href="my web.html" target="АГУУЛГА"><button class="button" type="button">Нүүр хуудас</button></a>
+        <a href="5.html" target="АГУУЛГА"><button class="button" type="button">Зурагнууд</button></a>
+        <a href="11.html" target="АГУУЛГА"><button class="button" type="button">Бичлэгнүүд</button></a>
+        <a href="6.html" target="АГУУЛГА"><button class="button" type="button">Газрын зураг</button></a>
+    </div>
+
+    <!-- Зүүн талын багана (Хувийн мэдээлэл) -->
+    <div class="div2">
+        <!-- Хувийн мэдээлэл хэсэг дотор зураг байрлах жижиг div -->
+        <div class="divjij">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlrZqTCInyg6RfYC7Ape20o-EWP1EN_A8fOA&s.jpg" width="100%" height="100%">
+        </div> 
+        <p> Хувийн мэдээлэл </p>
+        <br/><a>Name : Enkhjin </a>
+        <br/><a>Gender : female </a>
+        <br/><a>Height : 168</a>
+        <br/>
+        <a>School : UFE </a>
+        <br/><a>Home address : </a>
+    </div>
+
+    <!-- Баруун талын контент хэсэг -->
+    <div class="div3">
+        <!-- Iframe ашиглаж, дээрх товчлууруудыг дарахад тухайн файл энд ачаалагдана -->
+        <iframe name="АГУУЛГА" width="100%" height="100%"></iframe>
+    </div>
+
+    <!-- Доод хэсэг (Гэрийн хаяг) -->
+    <div class="div4">Гэрийн хаяг </div>
+</body>
+</html>

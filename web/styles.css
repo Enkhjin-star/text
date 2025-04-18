@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); 
+/* Google шрифт холбоно. 'Poppins' шрифтийг ашиглаж байна. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    /* Бүх элементүүдийн default шрифтийг 'Poppins' болгоно. */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    /* Дэлгэцийн өндөртэй тэнцүү байх */
+
+    background: url('https://wallpapercave.com/wp/wp2634222.jpg') no-repeat center center/cover; 
+    /* Арын зураг тавьж, дэлгэцийн хэмжээнд тохируулна. */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    /* Контейнер бүхэлдээ дэлгэцийн өндөртэй ижил байх */
+}
+
+.login-form {
+    background: rgba(255, 255, 255, 0.1); 
+    /* Формын дэвсгэрийг цагаан өнгийн бага зэрэг тунгалаг байхаар тохируулна. */
+
+    padding: 20px;
+    border-radius: 10px; 
+    /* Буланг зөөллөж, дугуйруулна. */
+
+    text-align: center;
+    width: 300px;
+    backdrop-filter: blur(10px); 
+    /* Арын хэсгийг бага зэрэг бүдэгрүүлнэ. */
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
+    /* Формын гадуур сүүдэр нэмнэ. */
+}
+
+h2 {
+    color: white; 
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative; 
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;   /* Зүүн талдаа 30 пикселийн зай авч, дүрс (icon)-ыг байрлуулахад тусална. */
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group .icon {
+    position: absolute;/*Дүрсийг input талбарын зүүн талд байршуулахад ашигласан*/
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);/* Дүрсийг босоо төвд байршуулах*/
+    color: gray;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between; 
+    /* Чекбокс болон холбоосыг хоёр тийш байрлуулна. */
+
+    font-size: 12px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.options a {
+    color: #ffcc00; 
+    text-decoration: none;/*Доогуур зураасгүй болгоно./
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50; 
+    /* Ногоон өнгийн товч */
+
+    color: white;
+    border: none;
+    border-radius: 5px;/*Булангуудыг 5 пикселээр дугуйруулна.*/
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #45a049; 
+    /* Хулганаа товчин дээр аваачих үед бага зэрэг өөр өнгөтэй болно */
+}
+
+p {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+p a {
+    color: #ffcc00; 
+    /* Шар өнгийн холбоос */
+    text-decoration: none;
+}
